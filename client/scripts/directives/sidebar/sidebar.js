@@ -8,7 +8,7 @@
  */
 
 angular.module('sbAdminApp')
-  .directive('sidebar',['$location','communcationService', function($location, communcationService) {
+  .directive('sidebar',['$location','$rootScope','communcationService', function($location, $rootScope, communcationService) {
     return {
       templateUrl:'scripts/directives/sidebar/sidebar.html',
       restrict: 'E',
@@ -19,6 +19,7 @@ angular.module('sbAdminApp')
         $scope.selectedMenu = 'dashboard';
         $scope.collapseVar = 0;
         $scope.multiCollapseVar = 0;
+        $scope.service = communcationService;
         
         $scope.testButtonClick = function(x){
           console.dir("we are in the sidebar::testButtonClick");
@@ -26,6 +27,14 @@ angular.module('sbAdminApp')
           console.dir("we generated Random number as :::" + genRandom);
           console.dir(communcationService.sayHello(genRandom));
         };  
+
+        $scope.testTableClick = function(tableName){
+          console.dir("we are in the sidebar::testTableClick");
+          communcationService.tableName = tableName;
+          communcationService.testRootScopeEmit();
+          
+        };  
+        
 
         $scope.check = function(x){
           
@@ -42,6 +51,17 @@ angular.module('sbAdminApp')
           else
             $scope.multiCollapseVar = y;
         };
+
+      //   $scope.$watch('service.getData()', function(newVal) {
+      //     console.dir('**DEAR TABLE NAME IS CHNAGED**');  
+      //     console.dir(newVal);
+      //     // $scope.controllerData = newVal;
+      // });
+
+          $rootScope.$on('tableName', function (event, data) {
+            console.dir('we caputred the emit transmission&&&&&&&&&&&&**');
+            console.dir(data); // 'Some data'
+          });
       }
     }
   }]);

@@ -1,4 +1,5 @@
-angular.module('sbAdminApp').service('communcationService', function() {
+angular.module('sbAdminApp').service('communcationService', ['$rootScope', function($rootScope) {
+    this.tableName = "";
 	this.abc = 0;
     this.sayHello = function(jo) {
     	console.dir("communcationService::myFunction");
@@ -11,4 +12,14 @@ angular.module('sbAdminApp').service('communcationService', function() {
     	return this.abc;
     };	
 
-});
+    this.testRootScopeEmit = function() {
+        console.dir("%%%%%%%communcationService::testRootScopeEmit%%%%%%%");
+        var obj = {tablename:this.tableName};    
+        $rootScope.$broadcast('tableName', obj );
+    };    
+
+    this.getData = function() {
+        var obj = {tablename:this.tableName};    
+        return obj;
+    };    
+}]);

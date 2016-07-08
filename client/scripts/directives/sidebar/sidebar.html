@@ -3,7 +3,7 @@
         <ul class="nav in" id="side-menu">
             <sidebar-search></sidebar-search>
             <li ui-sref-active="active">
-                <!-- <button ng-click="testButtonClick()">Click me!</button> -->
+                <button ng-click="testButtonClick()">Click me!</button>
                 <a ui-sref="dashboard.home"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
             </li>
         <!--     <li ui-sref-active="active">
@@ -35,16 +35,16 @@
                         <a href="" ng-click="multiCheck(3)">Database Name <span class="fa arrow"></span></a>
                         <ul class="nav nav-third-level" collapse="multiCollapseVar!=3">
                             <li>
-                                <a ui-sref="dashboard.table"><i class="fa fa-table fa-fw"></i> Tables</a>
+                                <a ng-click="testTableClick('AbcTable')"><i class="fa fa-table fa-fw"></i> Tables 1</a>
                             </li>
                             <li>
-                                <a ui-sref="dashboard.table"><i class="fa fa-table fa-fw"></i> Tables</a>
+                                <a ng-click="testTableClick('DEFTable')"><i class="fa fa-table fa-fw"></i> Tables 1</a>
                             </li>
                             <li>
-                                <a ui-sref="dashboard.table"><i class="fa fa-table fa-fw"></i> Tables</a>
+                                <a ng-click="testTableClick('GOOMANTable')"><i class="fa fa-table fa-fw"></i> Tables 1</a>
                             </li>
                             <li>
-                                <a ui-sref="dashboard.table"><i class="fa fa-table fa-fw"></i> Tables</a>
+                                <a ng-click="testTableClick('KINGTABLE')"><i class="fa fa-table fa-fw"></i> Tables 1</a>
                             </li>
 
                         </ul>
