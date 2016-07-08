@@ -1,0 +1,34 @@
+{
+  "name": "sb-admin",
+  "version": "0.0.0",
+  "dependencies": {
+    "angular": "latest",
+    "json3": "latest",
+    "es5-shim": "latest",
+    "angular-resource": "latest",
+    "angular-cookies": "latest",
+    "angular-sanitize": "latest",
+    "angular-animate": "latest",
+    "angular-touch": "latest",
+    "angular-route": "latest",
+    "font-awesome": "latest",
+    "angular-bootstrap": "latest",
+    "oclazyload": "latest",
+    "angular-loading-bar": "latest",
+    "angular-ui-router": "latest",
+    "angular-toggle-switch": "latest",
+    "metisMenu": "latest",
+    "angular-chart.js": "latest",
+    "bootstrap": "latest",
+    "angular-ui-grid": "latest"
+  },
+  "devDependencies": {
+    "angular-mocks": "1.2.16",
+    "angular-scenario": "1.2.16"
+  },
+  "resolutions": {
+    "bootstrap": "~3.1.1",
+    "angular": "1.5.7"
+  },
+  "appPath": "client"
+}

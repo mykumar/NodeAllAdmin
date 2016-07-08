@@ -1,0 +1,47 @@
+<div class="row">
+    <div class="col-lg-12">
+        <h1 class="page-header">Forms</h1>
+    </div>  
+    <!-- /.col-lg-12 -->
+</div>
+<!-- /.row -->
+<div class="row">
+    <div class="col-lg-12">
+            <div class="col-lg-6">
+                <form role="form">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            Primary Panel
+                        </div>
+                        <div class="panel-body">
+                            <div class="form-group">
+                                <label>Connection Name</label>
+                                <input class="form-control">
+                                <label>Connection Method</label>
+                                <select id="disabledSelect" class="form-control">
+                                    <option>TCP/IP Connection</option>
+                                </select>
+                                <label>Hostname</label>
+                                <input class="form-control" placeholder="Enter text">
+                                <label>port</label>
+                                <input class="form-control" placeholder="Enter text">
+                                <label>Username</label>
+                                <input class="form-control" placeholder="Enter text">
+                                <label>Password</label>
+                                <input class="form-control" placeholder="Enter text">
+                            </div>
+                        </div>
+                        <div class="panel-footer">
+                            <button type="submit" class="btn btn-info btn-xs">Submit Button</button>
+                            <button type="reset" class="btn btn-info btn-xs">Reset Button</button>
+                            <button type="reset" class="btn btn-warning btn-xs" ng-click="testConnection()">Test Connection
+                            </button>
+                            <button type="reset" class="btn btn-danger btn-xs">Open Connection
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+    </div>
+    <!-- /.col-lg-12 -->
+</div>
